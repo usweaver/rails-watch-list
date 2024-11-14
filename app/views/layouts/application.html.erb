@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="container">
+      <nav class="mc-navbar">
+        <i class="fa-solid fa-clapperboard mc-logo"></i>
+        <div class="flex-grow-1"></div>
+        <%= link_to lists_path do %>
+          <div class="mc-navbar-item"><i class="fa-solid fa-list-ul"></i> All lists</div>
+        <% end %>
+        <%= link_to new_list_path do %>
+          <div class="mc-navbar-item"><i class="fa-solid fa-plus"></i> Add a list</div>
+        <% end %>
+      </nav>
+      <%= yield %>
+    </div>
   </body>
 </html>

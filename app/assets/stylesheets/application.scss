@@ -10,3 +10,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: rgb(31, 31, 31);
+  font-size: 2rem;
+  border-bottom: solid 0.25rem rgb(31, 31, 31);
+}

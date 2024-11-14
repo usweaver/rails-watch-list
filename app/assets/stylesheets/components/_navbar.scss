@@ -1,12 +1,29 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.mc-navbar {
+  background-color: #161617;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.mc-logo {
+  color: white;
+  font-size: 2rem;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.mc-navbar-item {
+  background-color: rgb(31, 31, 31);
+  padding: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  font-family: "Russo One";
+  border: solid 1px transparent;
+
+  &:hover {
+    border: solid 1px white;
+  }
 }

@@ -11,6 +11,7 @@
   </head>
   <body>
     <div class="container">
+
       <nav class="mc-navbar">
         <i class="fa-solid fa-clapperboard mc-logo"></i>
         <div class="flex-grow-1"></div>
@@ -21,7 +22,9 @@
           <div class="mc-navbar-item"><i class="fa-solid fa-plus"></i> Add a list</div>
         <% end %>
       </nav>
+      <div class="rounded bg-light p-4">
       <%= yield %>
+      </div>
     </div>
   </body>
 </html>

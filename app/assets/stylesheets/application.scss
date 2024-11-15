@@ -11,6 +11,16 @@
 @import "components/index";
 @import "pages/index";
 
+body {
+  background-image: asset-url("movie_theatre.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  height: 100vh;
+  background-color: #000;
+}
+
 a {
   text-decoration: none;
 }
@@ -21,4 +31,6 @@ h1 {
   font-size: 2rem;
   border-bottom: solid 0.25rem rgb(31, 31, 31);
   font-weight: 700;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }

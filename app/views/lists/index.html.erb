@@ -3,7 +3,7 @@
   <% @lists.each do |list| %>
   <div class="col-4">
     <div class="card text-center mb-3">
-      <img src="..." class="card-img-top" alt="...">
+      <img src="<%= cl_image_path list.image.key, height: 200, crop: :fill %>" class="card-img-top" alt="<%= list.name %>">
       <div class="card-body">
         <h5 class="card-title"><%= list.name %></h5>
         <%= link_to "See the list", list_path(list), class: "btn btn-primary" %>

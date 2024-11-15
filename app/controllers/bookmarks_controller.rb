@@ -1,5 +1,6 @@
 class BookmarksController < ApplicationController
   def create
+    @review = Review.new
     @list = List.find(params[:list_id])
     @movie = Movie.find(params[:bookmark][:movie_id])
     @bookmark = Bookmark.new(bookmark_params)

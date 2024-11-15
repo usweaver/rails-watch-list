@@ -1,6 +1,14 @@
 <h1>All lists</h1>
-<ul class="mc-list-cards">
+<div class="row">
   <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
+  <div class="col-4">
+    <div class="card text-center mb-3">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= list.name %></h5>
+        <%= link_to "See the list", list_path(list), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
   <% end %>
-</ul>
+</div>

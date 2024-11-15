@@ -16,12 +16,13 @@
 
 .mc-navbar-item {
   background-color: rgb(31, 31, 31);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   color: white;
   text-transform: uppercase;
   border-radius: 0.5rem;
-  font-family: "Russo One";
+  font-family: $headers-font;
   border: solid 1px transparent;
+  font-weight: 700;
 
   &:hover {
     border: solid 1px white;

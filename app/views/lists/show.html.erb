@@ -1,14 +1,28 @@
 <h1><%= @list.name %></h1>
-<% @list.bookmarks.each do |bookmark| %>
-  <%= bookmark.movie.title %>
-  <%= bookmark.id %>
-  <img src="<%= bookmark.movie.poster_url %>" alt="<%= bookmark.movie.title %>" width="100">
-  <%= bookmark.comment %>
-  <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<% end %>
-<h3>Add a bookmark</h3>
-<%= simple_form_for ([@list, @bookmark]) do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.submit %>
-<% end %>
+<div class="row">
+  <div class="col-8">
+    <div class="row">
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="col-6">
+          <div class="card mb-3">
+            <img src="<%= bookmark.movie.poster_url %>" class="card-img-top" alt="<%= bookmark.movie.title %>">
+            <div class="card-body">
+              <h5 class="card-title"><%= bookmark.movie.title %></h5>
+              <p class="card-text text-secondary"><%= bookmark.movie.overview %>.</p>
+              <p class="card-text"><b><%= bookmark.comment %></b></p>
+              <%= link_to "Delete", bookmark_path(bookmark), class: "btn btn-danger btn-sm", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-4">
+    <h3>Add a bookmark</h3>
+    <%= simple_form_for ([@list, @bookmark]) do |f| %>
+      <%= f.association :movie %>
+      <%= f.input :comment %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
